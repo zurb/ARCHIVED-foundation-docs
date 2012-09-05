@@ -7,23 +7,37 @@
 <head>
 	<meta charset="utf-8" />
 	
-	<!-- Uncomment to make IE8 render like IE7 -->
-	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	<% if false %>
+	<%= render "keywords" %>
+	<%= render "icons" %>
+	<% end %>
 	
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<title><%= content_for?(:title) ? yield(:title) : "Foundation" %></title>
   
 	<!-- Included CSS Files -->
 	<%= stylesheet_link_tag    "application" %>
-	
+  <%= stylesheet_link_tag "http://www.zurb.com/assets/foundation.top-bar.css" %>
+  <%= stylesheet_link_tag "http://www.zurb.com/assets/zurb.mega-drop.css" %>
+  
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "application" %>
   
   <%= csrf_meta_tags %>
+  
+  <!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
 <body>
+  <%= render "top_bar" %>
   <%= yield %>
+  <%= render "footer" %>
+  <% if false %>
+  <%= render "google_analytics" %>
+  <% end %>
 </body>
 </html>

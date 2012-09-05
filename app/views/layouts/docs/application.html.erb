@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<% if false %>
+	<%= render "keywords" %>
+	<%= render "icons" %>
+	<% end %>
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "Foundation" %></title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "docs" %>
+  <%= stylesheet_link_tag "http://www.zurb.com/assets/foundation.top-bar.css" %>
+  <%= stylesheet_link_tag "http://www.zurb.com/assets/zurb.mega-drop.css" %>
+  
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+  
+  <!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="off-canvas">
+  <%= render "top_bar" %>
+  <header id="header" class="row">
+	  <div class="eight columns">
+	    <h1><a href="index.php">Foundation 3 Documentation</a></h1>
+	    <h4 class="subheader">Everything you need to know to build for the future.</h4>
+
+  	  <div class="show-for-small menu-action">
+  	    <a id="sidebarButton" href="#sidebar"
+  	      class="sidebar-button small secondary button">
+    	    <svg version="1.1" id="Layer_1" 
+    	      xmlns="http://www.w3.org/2000/svg"
+    	      xmlns:xlink="http://www.w3.org/1999/xlink"
+    	      x="0px" 
+    	      y="0px"
+    	      width="18px" 
+    	      height="18px" 
+    	      viewBox="0 0 48 48" 
+    	      enable-background="new 0 0 48 48" 
+    	      xml:space="preserve">
+            <line fill="none" 
+              stroke="#000000" 
+              stroke-width="8" 
+              stroke-miterlimit="10" 
+              x1="0" 
+              y1="8.907" 
+              x2="48" 
+              y2="8.907" />
+            <line fill="none" 
+              stroke="#000000" 
+              stroke-width="8" 
+              stroke-miterlimit="10" 
+              x1="0" 
+              y1="24.173" 
+              x2="48" 
+              y2="24.173" />
+            <line fill="none" 
+              stroke="#000000" 
+              stroke-width="8" 
+              stroke-miterlimit="10" 
+              x1="0" 
+              y1="39.439" 
+              x2="48" 
+              y2="39.439" />
+            Menu
+          </svg>
+  	    </a>
+  	  </div>
+	  </div>
+	</header>
+  <%= yield %>
+  <%= render "footer" %>
+  <% if false %>
+  <%= render "google_analytics" %>
+  <% end %>
+</body>
+</html>
