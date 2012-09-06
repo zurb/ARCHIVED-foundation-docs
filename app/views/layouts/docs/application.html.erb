@@ -24,6 +24,13 @@
   
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "application" %>
+	<script type="text/javascript" charset="utf-8">
+    <% if Rails.env.development? %>
+    $.pjax.defaults.timeout = false;
+    <% end %>
+    // Only some pages should use PJAX
+    $('.js-pjax a').pjax('[data-pjax-container]');
+	</script>
   
   <%= csrf_meta_tags %>
   
@@ -82,7 +89,9 @@
   	  </div>
 	  </div>
 	</header>
-  <%= yield %>
+  <div data-pjax-container>
+    <%= yield %>
+  </div>
   <%= render "footer" %>
   <% if false %>
   <%= render "google_analytics" %>
