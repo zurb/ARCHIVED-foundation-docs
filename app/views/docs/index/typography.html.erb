@@ -10,6 +10,15 @@
 				<p>We then use Sass to generate sizes based on those values, in an ascending scale of size and spacing. If you use the SCSS version of Foundation you can easily change these values, otherwise we default to a 14px base with a 44px important value (based on common UI element size).</p>
 
 				<script src="https://gist.github.com/3318494.js?file=modscale.scss"></script>
+				<pre><code data-language="css">// Variables
+$ratio: $golden;
+$baseSize: 14px;
+$importantModNum: 44px;
+
+// Modular Scale SCSS Function Syntax
+h6 { font-size: ms(0); } // First Number in Scale
+h5 { font-size: ms(1); } // Second Number in Scale
+h4 { font-size: ms(2); } // Third Number in Scale</code></pre>
 
 				<hr />
 
@@ -39,11 +48,12 @@
           <h2>This is a very large main header.</h2>
           <h4 class="subheader">This is a smaller subheader.</h4>
 
-          <script src="https://gist.github.com/2952496.js?file=f3-subheaders.html"></script>
+          <pre><code data-language="html"><h2>This is a large main header.</h2>
+<h4 class="subheader">This is a smaller subheader.</h4>
+</code></pre>
 
           <h3>This is a large header. <small>This is a small segment of that header.</small></h3>
-          <script src="https://gist.github.com/2952501.js?file=f3-header-segment.html"></script>
-
+          <pre><code data-language="html"><h3>This is a large header. <small>This is a small segment of that header.</small></h3></code></pre>
 				</div>
 
 				<hr />
@@ -126,7 +136,10 @@
 
 				<blockquote>I do not fear computers. I fear the lack of them. <cite>Isaac Asimov</cite></blockquote>
 
-				<script src="https://gist.github.com/2952560.js?file=f3-blockquote.html"></script>
+				<pre><code data-language="html"><blockquote>
+  I do not fear computers. I fear the lack of them. 
+  <cite>Isaac Asimov</cite>
+</blockquote></code></pre>
 
 				<hr />
 
@@ -144,7 +157,7 @@
 
   		</div>
   		<div class="four columns">
-  		  <? include("includes/_download.php"); ?>
+  		  <%= render "download" %>
   		</div>
     </div>
 	</section>

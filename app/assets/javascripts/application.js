@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation/modernizr.foundation
 //= require foundation
 //= require jquery.pjax
 //= require rainbow
