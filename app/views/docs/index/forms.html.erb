@@ -37,7 +37,24 @@
         	</div>
         </form>
 
-        <script src="https://gist.github.com/2952683.js?file=f3-simple-form.html"></script>
+        <pre><code data-language="html"><form>
+  <label>This is a label.</label>
+  <input type="text" placeholder="Standard Input" />
+
+  <label>Address</label>
+  <input type="text" class="twelve" placeholder="Street" />
+  <div class="row">
+    <div class="six columns">
+      <input type="text" placeholder="City" />
+    </div>
+    <div class="three columns">
+      <input type="text" placeholder="State" />
+    </div>
+    <div class="three columns">
+      <input type="text" placeholder="ZIP" />
+    </div>
+  </div>  
+</form></code></pre>
 
         <p>Sometimes you want a form with labels to the left of your inputs. Piece of cake. You can add a class of <code>.right</code> to a label to have it align to the right, and if your label is next to an input (in another column) adding a class of <code>.inline</code> will have it vertically center against an input.</p>
 
@@ -68,7 +85,32 @@
           </div>
         </form>
 
-        <script src="https://gist.github.com/2952702.js?file=f3-left-form.html"></script>
+        <pre><code data-language="html"><form>
+  <div class="row">
+    <div class="two mobile-one columns">
+      <label class="right inline">Address Name:</label>
+    </div>
+    <div class="ten mobile-three columns">
+      <input type="text" placeholder="e.g. Home" class="eight" /> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="two mobile-one columns">
+      <label class="right inline">City:</label>
+    </div>
+    <div class="ten mobile-three columns">
+      <input type="text" class="eight" /> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="two mobile-one columns">
+      <label class="right inline">ZIP:</label>
+    </div>
+    <div class="ten mobile-three columns">
+      <input type="text" class="three" /> 
+    </div>
+  </div>
+</form></code></pre>
 
         <hr />
 
@@ -90,7 +132,18 @@
           </fieldset>
         </form>
 
-        <script src="https://gist.github.com/2952713.js?file=f3-fieldset.html"></script>
+        <pre><code data-language="html"><fieldset>
+
+  <legend>Fieldset Name</legend>
+
+  <label>This is a label.</label>
+  <input type="text" placeholder="Standard Input" />
+
+  <label>Address</label>
+  <input type="text" />
+  <input type="text" class="six" /> 
+
+</fieldset></code></pre>
 
         <hr />
 
@@ -110,7 +163,19 @@
             </div>
           </div>
         </div>
-        <script src="https://gist.github.com/2954955.js?file=f3-prefix-form.html"></script>
+        <pre><code data-language="html"><label>Input with a prefix character</label>
+<div class="row">
+  <div class="four columns">
+    <div class="row collapse">
+      <div class="two mobile-one columns">
+        <span class="prefix">#</span>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="text" />
+      </div>
+    </div>
+  </div>
+</div></code></pre>
 
         <p><strong>Note:</strong> for these prefix and postfix labels we're using the <a href="grid.php">mobile grid</a> to size our labels correctly on small devices.</p>
 
@@ -127,7 +192,19 @@
             </div>
           </div>
         </div>
-        <script src="https://gist.github.com/2954957.js?file=f3-form-postfix.html"></script>
+        <pre><code data-language="html"><label>Input with a prefix character</label>
+<div class="row">
+  <div class="five columns">
+    <div class="row collapse">
+      <div class="eight mobile-three columns">
+        <input type="text" />
+      </div>
+      <div class="four mobile-one columns">
+        <a href="#" class="postfix button">Search</a>
+      </div>
+    </div>
+  </div>
+</div></code></pre>
 
         <label>Input with a postfix action (button)</label>
         <div class="row">
@@ -142,7 +219,19 @@
             </div>
           </div>
         </div>
-        <script src="https://gist.github.com/3342347.js?file=postfix.html"></script>
+        <pre><code data-language="html"><label>Input with a prefix character</label>
+<div class="row">
+  <div class="five columns">
+    <div class="row collapse">
+      <div class="eight mobile-three columns">
+        <input type="text" />
+      </div>
+      <div class="four mobile-one columns">
+        <a href="#" class="postfix button expand">Search</a>
+      </div>
+    </div>
+  </div>
+</div></code></pre>
 
         <hr />
         
@@ -163,7 +252,19 @@
           </div>
         </div>
         
-        <script src="https://gist.github.com/3299571.js?file=error-forms.html"></script>
+        <pre><code data-language="html"><div class="row">
+  <div class="five columns">
+    <label class="error">Field with Error</label>
+    <input type="text" class="error" />
+    <small class="error">Invalid entry</small>
+  </div>
+
+  <div class="five columns end error">
+    <label>Another Error</label>
+    <input type="text" />
+    <small>Invalid entry</small>
+  </div>
+</div></code></pre>
         
         <hr />
 
@@ -249,19 +350,38 @@
 					  <h5>JavaScript Dependency</h5>
 					  <p>The <strong>jquery.foundation.forms.js</strong> is required to make these custom elements work.  Once included it can be initialized like so:</p>
 
-            <script src="https://gist.github.com/3316513.js?file=initialize.js"></script>
+            <pre><code data-language="js">$(document).foundationCustomForms();</code></pre>
             
             <p>Once initialized it will look for any checkbox, radio button, or select element and replace it with custom markup that Foundation provides styles for. It will even correctly respect and apply default states for radio, checkbox and select elements. You can use the "checked" or "selected" properties just like normal.</p>
             
             <p>If you want to avoid a potential flash (waiting for js to load and replace your default elements) you can supply the custom markup as part of the page, and the js will instead simply map the custom elements to the inputs.</p>
             
-            <script src="https://gist.github.com/3316513.js?file=example.html"></script>
+            <pre><code data-language="html">&lt;form class="custom"&gt;
+<!-- No custom markup applied -->
+<label for="radio1">
+  <input name="radio1" type="radio" id="radio1"> Radio Button 1
+</label>
+
+<!-- Above markup will become this -->
+<label for="radio1">
+  <input name="radio1" type="radio" id="radio1" style="display:none;">
+  <span class="custom radio"></span> Radio Button 1
+</label>
+
+<!-- This markup will NOT be touched by Javascript -->
+<label for="radio2">
+  <input name="radio1" type="radio" id="radio2" style="display:none;">
+  <span class="custom radio checked"></span> Radio Button 2
+</label>&lt;/form&gt;</code></pre>
             
             <p>If you dynamically add inputs to your page you'll need to update the custom markup.  You can safely call the previous function again, but to improve performance you can also scope it to only update a single input.  For example:</p>
             
-            <script src="https://gist.github.com/3316513.js?file=page.html"></script>
+            <pre><code data-language="html"><select id="changedSelectInput">
+  <option>Pick One</option>
+</select></code></pre>
             
-            <script src="https://gist.github.com/3316513.js?file=changed.js"></script>
+            <pre><code data-language="js">// When something changes
+$("#changedSelectInput").foundationCustomForms();</code></pre>
             
 					</div>
 
@@ -286,8 +406,34 @@
 
 					<br /><br />
 
-					<script src="https://gist.github.com/2955081.js?file=f3-custom-radio.html"></script>
-					<script src="https://gist.github.com/2955092.js?file=f3-custom-checkbox.html"></script>
+					<pre><code data-language="html"><label for="radio1">
+  <input name="radio1" type="radio" id="radio1" style="display:none;">
+  <span class="custom radio"></span> Radio Button 1
+</label>
+
+<label for="radio2">
+  <input name="radio1" type="radio" id="radio2" style="display:none;">
+  <span class="custom radio checked"></span> Radio Button 2
+</label>
+
+<label for="radio3">
+  <input name="radio1" type="radio" id="radio3" disabled style="display:none;">
+  <span class="custom radio"></span> Radio Button 3
+</label></code></pre>
+					<pre><code data-language="html"><label for="checkbox1">
+  <input type="checkbox" id="checkbox1" style="display: none;">
+  <span class="custom checkbox"></span> Label for Checkbox
+</label>
+
+<label for="checkbox2">
+  <input type="checkbox" id="checkbox2" style="display: none;">
+  <span class="custom checkbox"></span> Label for Checkbox
+</label>
+
+<label for="checkbox3">
+  <input type="checkbox" id="checkbox3" style="display: none;">
+  <span class="custom checkbox"></span> Label for Checkbox
+</label></code></pre>
 
 					<br />
 					<h5>Dropdown / Select Elements</h5>
@@ -317,14 +463,28 @@
 						<option>Look, a third option</option>
 					</select>
 
-				  <script src="https://gist.github.com/2955100.js?file=f3-custom-dropdowns.html"></script>
+				  <pre><code data-language="html"><label for="customDropdown">Dropdown Label</label>
+<select style="display:none;" id="customDropdown">
+  <option SELECTED>This is a dropdown</option>
+  <option>This is another option</option>
+  <option>Look, a third option</option>
+</select>
+<div class="custom dropdown">
+  <a href="#" class="current">This is a dropdown</a>
+  <a href="#" class="selector"></a>
+  <ul>
+    <li>This is a dropdown</li>
+    <li>This is another option</li>
+    <li>Look, a third option</li>
+  </ul>
+</div></code></pre>
 
 				</form>
 
 
   		</div>
   		<div class="four columns">
-  		  <? include("includes/_download.php"); ?>
+  		  <%= render "download" %>
   		</div>
     </div>
 	</section>
