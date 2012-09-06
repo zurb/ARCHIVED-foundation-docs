@@ -1,0 +1,38 @@
+<div class="row">
+	<section role="main">
+	  <div class="row">
+	    <div class="eight columns">
+  			
+  			<h3>Javascripts</h3>
+  			<h4 class="subheader">All about the JS that supports Foundation. We swear it's not black magic.</h4>
+  			
+  			<hr />
+  			
+  			
+  			<h4>What?</h4>
+  			<p>Some components of Foundation require a little javascript to make them work correctly.  For example the dropdown buttons use javascript to toggle the dropdown on and off.  To keep things clean we've extracted this behavior into several plugins.  We then provide a single <strong>app.js</strong> file where you can initialize these plugins for your project.  The default download package will take care of initializing everything for you, but you can find out more about each plugin on the component documentation pages.</p>
+
+  			<hr />
+  			
+  			<h4>Where are the javascripts placed?</h4>
+  			<p>Depending on how you're using Foundation the Javascript may reside in different places.  Refer to one of the installation methods below for more specific information:</p>
+  			
+  			<h5>via Compass</h5>
+  			<p>When setup with Compass the javascripts are copied over to <strong>javascripts/foundation</strong> folder.  There is no compressed version when using the Compass gem.</p>
+  			
+  			<h5>via Customizer</h5>
+  			<p>The customizer provides two sets of Javascript files in the resulting project.  There is a <strong>javascripts/foundation.min.js</strong> that includes all the plugins selected, in addition to jQuery and Modernizr.  All the uncompressed Javascripts are also placed in <strong>javascripts/</strong> in case you want to make changes and compress them yourself.</p>
+  			
+  			<h5>via Rails</h5>
+  			<p>The Foundation gem delivers all the assets through the asset pipeline.  All you need to do is include <kbd>//= require foundation</kbd> in your <strong>app/assets/javascripts/application.js</strong> file and you're all set.  When you update the Foundation gem the new Javascript files will automatically be used in your project.</p>
+				
+
+  		</div>
+  		<div class="four columns">
+  		  <? include("includes/_download.php"); ?>
+  		</div>
+    </div>
+	</section>
+
+	<%= render "sidebar" %>
+</div>

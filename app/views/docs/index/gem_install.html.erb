@@ -26,7 +26,7 @@
             <a name="installing"></a>
             <h4>Installation</h4>
             <p>To create your first project using our Compass extension, you'll need to have the zurb-foundation gem installed. This includes all the necessary dependencies that you'll need to get going.</p>
-            <p class="btm-marg keystroke">[sudo] gem install zurb-foundation</p>
+            <pre><code data-language="shell">> [sudo] gem install zurb-foundation</code></pre>
             <em style="position: relative; top: -20px; font-size: 12px;">Note: Make sure you aren't using 'ZURB-foundation' as that is the 2.2 version.</em>
 
             <h5>Installation Release Candidate Versions of the Gem</h5>
@@ -34,11 +34,9 @@
             <p class="btm-marg keystroke">[sudo] gem install zurb-foundation --pre</p>
 
             <h5>Creating Your first project</h5>
-            <p class="keystroke">
-              cd path/to/where-you-want-your-project <br>
-              compass create &lt;project-name&gt; -r zurb-foundation --using foundation
-            </p>
-            <p>
+            <pre><code data-language="shell">> cd path/to/where-you-want-your-project
+> compass create &lt;project-name&gt; -r zurb-foundation --using foundation</code></pre>
+
             <p class="btm-marg">Now you should have a new project folder created with foundation included along with all the awesome advantages that comes with <a href="http://sass-lang.com/" rel="nofollow">Sass</a> and <a href="http://compass-style.org/" rel="nofollow">Compass</a>.</p>
             
             <h5>Adding Foundation to an existing Compass project</h5>
@@ -162,6 +160,15 @@
             <h5>Customizing Your Imports</h5>
             <p>When you are customizing, you must always include this set of files to ensure proper behavior.</p>
             <script src="https://gist.github.com/3174610.js?file=app2.scss"></script>
+            <pre><code data-language="css">// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/function/all";
+// @import "foundation/common/globals";
+// @import "foundation/mixins/clearfix";</code></pre>
 
             <p>The next bit of code controls which common elements get included. Certain elements will throw an error to let you know if they rely on a mixin you haven't included.</p>
             <script src="https://gist.github.com/3174615.js?file=app3.scss"></script>
@@ -214,7 +221,9 @@
             <ul class="disc">
               <li><strong>@include font-size(size);</strong> Outputs 'px' and 'rem' for the number you include!</li>
             </ul>
-            <span class="btm-marg"><script src="https://gist.github.com/3009156.js?file=font-size.scss"></script></span>
+            <pre><code data-language="css">.element {
+  @include font-size(18);
+}</code></pre>
 
             <h5>CSS Triangles</h5>
             <p>If you are unfamiliar with CSS triangles, learn more <a href="http://css-tricks.com/snippets/css/css-triangle/">here.</a> We use them all over in foundation for things like the arrows in dropdowns and pips on tooltips flyouts.</p>
@@ -222,7 +231,9 @@
             <ul class="disc">
               <li><strong>@include cssTriangle(size, color, direction);</strong> Easily create awesome triangles!</li>
             </ul>
-            <span class="btm-marg"><script src="https://gist.github.com/3009123.js?file=css-triangles.scss"></script></span>
+            <pre><code data-language="css">.element {
+  @include cssTriangle(5px, #ff0000, [top, bottom, left, right]);
+}</code></pre>
 
           </li>
 
