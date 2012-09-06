@@ -33,7 +33,7 @@ header h4 { color: #fff; font-weight: 300; }
 p.disclaimer { color: #999; }
 
 /* Homepage */
-header#homepage { background: url('../images/device-bg.png?1340846519') center bottom no-repeat #2ba6cb; padding: 22px 0 262px; }
+header#homepage { background: image-url("device-bg.png") center bottom no-repeat #2ba6cb; padding: 22px 0 262px; }
 header#homepage h4 { margin-bottom: 44px; }
 header#homepage .button { background: #137795; border: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; 
   
@@ -73,22 +73,22 @@ header#homepage .button { background: #137795; border: none; -webkit-box-shadow:
 }
 
 
-@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { header#homepage { background-size: auto 357.5px; background-image: url('../images/device-bg-retina.png?1340846519'); } }
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { header#homepage { background-size: auto 357.5px; background-image: image-url('device-bg-retina.png'); } }
 #homepageFeatures { background: #ecf8ff; padding: 88px 0 44px 0; margin-bottom: 44px; }
 #homepageFeatures h3 { color: #2ba6cb; }
 #homepageFeatures div.pic { width: 110px; height: 110px; background-size: 100% 100%; }
 
 @media only screen and (max-width: 767px) { header#homepage { background-size: auto 130px; padding-bottom: 150px; }
   #homepageFeatures { padding-top: 30px; } }
-.pic#homepageImgSass { background-image: url('../images/homepageImgSass.png?1340846519'); }
+.pic#homepageImgSass { background-image: image-url('homepageImgSass.png'); }
 
-.pic#homepageImgFeatures { background-image: url('../images/homepageImgFeatures.png?1340846519'); }
+.pic#homepageImgFeatures { background-image: image-url('homepageImgFeatures.png'); }
 
-.pic#homepageImgAdvanced { background-image: url('../images/homepageImgAdvanced.png?1340846519'); }
+.pic#homepageImgAdvanced { background-image: image-url('homepageImgAdvanced.png'); }
 
-@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .pic#homepageImgSass { background-image: url('../images/homepageImgSass-retina.png?1340846519'); }
-  .pic#homepageImgFeatures { background-image: url('../images/homepageImgFeatures-retina.png?1340846519'); }
-  .pic#homepageImgAdvanced { background-image: url('../images/homepageImgAdvanced-retina.png?1340846519'); } }
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .pic#homepageImgSass { background-image: image-url('homepageImgSass-retina.png'); }
+  .pic#homepageImgFeatures { background-image: image-url('homepageImgFeatures-retina.png'); }
+  .pic#homepageImgAdvanced { background-image: image-url('homepageImgAdvanced-retina.png'); } }
 #github { background: #3f3f3f; padding: 20px 30px 0; }
 #github h4 { color: #fff; }
 #github span, #github #github a { color: #fff; font-size: 12px; font-size: 1.2rem; display: block; white-space: break-word; line-height: 1.3; margin-bottom: 3px; }
@@ -101,15 +101,15 @@ header#homepage .button { background: #137795; border: none; -webkit-box-shadow:
 
 #frameworkFeatures a.pic { width: 205px; height: 130px; display: block; background-repeat: none; background-size: 100% 100%; }
 
-#featureGrid { background-image: url('../images/featureGrid.png?1340846519'); }
+#featureGrid { background-image: image-url('featureGrid.png'); }
 
-#featurePrototype { background-image: url('../images/featurePrototype.png?1340846519'); }
+#featurePrototype { background-image: image-url('featurePrototype.png'); }
 
-#featureDevices { background-image: url('../images/featureDevices.png?1340846519'); }
+#featureDevices { background-image: image-url('featureDevices.png'); }
 
 @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { #featureGrid { background-image: url('../images/featureGrid-retina.png?1340846519'); }
-  #featurePrototype { background-image: url('../images/featurePrototype-retina.png?1340846519'); }
-  #featureDevices { background-image: url('../images/featureDevices-retina.png?1340846519'); } }
+  #featurePrototype { background-image: image-url('featurePrototype-retina.png'); }
+  #featureDevices { background-image: image-url('featureDevices-retina.png'); } }
 #usingFoundation { background: #2ba6cb; padding: 22px 0; margin: 44px 0; }
 #usingFoundation h3, #usingFoundation #usingFoundation a { color: #fff; }
 #usingFoundation a.top-right { position: absolute; top: 22px; right: 15px; color: rgba(255, 255, 255, 0.5); }
@@ -119,7 +119,7 @@ header#homepage .button { background: #137795; border: none; -webkit-box-shadow:
 
 @media only screen and (max-width: 767px) { #usingFoundation a.top-right { display: none; } }
 
-.case-study { background: url('../images/case-study-bg.png?1340846519') left bottom repeat-x #f8f8f8; padding: 8px 20px 8px 45%; margin-bottom: 30px; position: relative; overflow: hidden; }
+.case-study { background: image-url('case-study-bg.png') left bottom repeat-x #f8f8f8; padding: 8px 20px 8px 45%; margin-bottom: 30px; position: relative; overflow: hidden; }
 .case-study a img { position: absolute; width: 45%; height: auto; left: 0; bottom: 0; display: block; border: none; }
 
 @media screen and (orientation: portrait) { .case-study { padding-left: 20px; }
@@ -152,7 +152,7 @@ header#homepage .button { background: #137795; border: none; -webkit-box-shadow:
 .top-bar .attached > ul.right > li > a:hover { color: $white; }
 .top-bar .attached > ul.right > li.download:hover > a { background-color: #2284A1; }
 .top-bar .attached > .name > span > a.toggle-nav { right: -45px !important; }
-@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .top-bar .attached > .name span > a.toggle-nav { background-image: url('../images/plus-toggle-2-retina.png?1340846519'); background-size: 100% 100%; } }
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .top-bar .attached > .name span > a.toggle-nav { background-image: image-url('plus-toggle-2-retina.png'); background-size: 100% 100%; } }
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   .top-bar { height: 45px !important; }
   .top-bar .attached { height: auto; }
