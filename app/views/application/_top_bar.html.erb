@@ -7,18 +7,21 @@
 
 		<ul class="right">
 			<li>
-			  <a href="grid.php">Features</a>
+			  <%= link_to "Features", features_root_path %>
 			</li>
 			<li>
-			  <a href="case-flite.php">Case Studies</a>
+			  <%= link_to "Case Studies", case_studies_root_path %>
 			</li>
 			<li>
-			  <a href="docs">Documentation</a>
+			  <%= link_to "Documentation", docs_root_path %>
 			</li>
 		  <li>
-		    <a href="http://github.com/zurb/foundation">GitHub</a>
+		    <%= link_to "GitHub", "http://github.com/zurb/foundation" %>
 			</li>
-			<li class="download"><a class="small blue nice button src-download" href="download.php">Download</a></li>
+			<li class="download">
+			  <%= link_to "Download", download_path, 
+			    class: "small blue nice button src-download" %>
+			</li>
 		</ul>
 	</div>
 </div>

@@ -11,16 +11,7 @@
 
   <div class="row">
     <div class="two columns">
-      <ul class="side-nav">
-        <li><a href="index.php">&larr; Home</a></li>
-        <li class="divider"></li>
-        <li><a href="case-flite.php">Flite</a></li>
-        <li><a href="case-swizzle.php">Swizzle</a></li>
-        <li><a href="case-soapbox.php">ZURBsoapbox</a></li>
-        <li><a href="case-reel.php">Reel</a></li>
-        <li><a href="case-zurbjobs.php">ZURBjobs</a></li>
-        <li class="active"><a href="case-wcb.php">WCB</a></li>
-      </ul>
+      <%= render "sidebar" %>
     </div>
     
     <div class="ten columns">
@@ -35,13 +26,13 @@
           
         </div>
         <div class="six columns">
-          <img src="images/case-wcb-1.jpg" id="sideDeviceDesktop" />
+          <%= image_tag "case-wcb-1.jpg", :id => "sideDeviceDesktop" %>
         </div>
       </div>
     
       <div class="row">
         <div class="six columns">
-          <img src="images/case-wcb-2.jpg" />
+          <%= image_tag "case-wcb-2.jpg" %>
         </div>
         <div class="six columns">
           <h4>You Can Hide Things On Phone</h4>
@@ -61,7 +52,7 @@
       
       <div class="row">
         <div class="twelve columns">
-          <img src="images/case-wcb-3.jpg"/>
+          <%= image_tag "case-wcb-3.jpg" %>
         </div>
       </div>
       

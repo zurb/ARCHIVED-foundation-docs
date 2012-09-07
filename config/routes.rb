@@ -1,5 +1,7 @@
 FoundationDocs::Application.routes.draw do
   root to: "index#home"
+  get "download"     => "index#download"
+  
   namespace :docs do
     root to: "index#home"
     get "installing"   => "index#install", as: :install
