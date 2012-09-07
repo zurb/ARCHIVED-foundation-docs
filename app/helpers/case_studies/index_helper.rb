@@ -1,0 +1,2 @@
+module CaseStudies::IndexHelper
+end

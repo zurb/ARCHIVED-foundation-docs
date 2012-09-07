@@ -16,5 +16,22 @@ FoundationDocs::Application.routes.draw do
     get "javascripts"  => "index#javascripts"
     get "support"      => "index#support"
   end
+  
+  namespace :features do
+    root to: "index#grid"
+    get "grid"        => "index#grid"
+    get "prototyping" => "index#prototyping"
+    get "mobile"      => "index#mobile"
+  end
+  
+  namespace :case_studies do
+    root to: "index#swizzle"
+    get "flite"    => "index#flite"
+    get "swizzle"  => "index#swizzle"
+    get "soapbox"  => "index#soapbox"
+    get "reel"     => "index#reel"
+    get "zurbjobs" => "index#zurbjobs"
+    get "wcb"      => "index#wcb"
+  end
   # SETUP REDIRECTS FOR OLD PHP ACTIONS HERE
 end

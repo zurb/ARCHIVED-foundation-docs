@@ -1,0 +1,11 @@
+<ul class="side-nav">
+  <li><%= link_to root_path do %>&larr; Home<% end %></li>
+  <li class="divider"></li>
+  <%= active_link_to "The Grid", 
+    features_grid_path, wrap_tag: :li,
+    active: [["features/index"], ["grid"]] %>
+  <%= active_link_to "Rapid Prototyping", 
+    features_prototyping_path, wrap_tag: :li %>
+  <%= active_link_to "Mobility", 
+    features_mobile_path, wrap_tag: :li %>
+</ul>
