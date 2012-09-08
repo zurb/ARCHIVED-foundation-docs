@@ -37,7 +37,7 @@
         	</div>
         </form>
 
-        <pre><code data-language="html"><form>
+        <%= code_block do %><form>
   <label>This is a label.</label>
   <input type="text" placeholder="Standard Input" />
 
@@ -54,7 +54,7 @@
       <input type="text" placeholder="ZIP" />
     </div>
   </div>  
-</form></code></pre>
+</form><% end %>
 
         <p>Sometimes you want a form with labels to the left of your inputs. Piece of cake. You can add a class of <code>.right</code> to a label to have it align to the right, and if your label is next to an input (in another column) adding a class of <code>.inline</code> will have it vertically center against an input.</p>
 
@@ -85,7 +85,7 @@
           </div>
         </form>
 
-        <pre><code data-language="html"><form>
+        <%= code_block do %><form>
   <div class="row">
     <div class="two mobile-one columns">
       <label class="right inline">Address Name:</label>
@@ -110,7 +110,7 @@
       <input type="text" class="three" /> 
     </div>
   </div>
-</form></code></pre>
+</form><% end %>
 
         <hr />
 
@@ -132,7 +132,7 @@
           </fieldset>
         </form>
 
-        <pre><code data-language="html"><fieldset>
+        <%= code_block do %><fieldset>
 
   <legend>Fieldset Name</legend>
 
@@ -143,7 +143,7 @@
   <input type="text" />
   <input type="text" class="six" /> 
 
-</fieldset></code></pre>
+</fieldset><% end %>
 
         <hr />
 
@@ -163,7 +163,7 @@
             </div>
           </div>
         </div>
-        <pre><code data-language="html"><label>Input with a prefix character</label>
+        <%= code_block do %><label>Input with a prefix character</label>
 <div class="row">
   <div class="four columns">
     <div class="row collapse">
@@ -175,7 +175,7 @@
       </div>
     </div>
   </div>
-</div></code></pre>
+</div><% end %>
 
         <p><strong>Note:</strong> for these prefix and postfix labels we're using the <a href="grid.php">mobile grid</a> to size our labels correctly on small devices.</p>
 
@@ -192,7 +192,7 @@
             </div>
           </div>
         </div>
-        <pre><code data-language="html"><label>Input with a prefix character</label>
+        <%= code_block do %><label>Input with a prefix character</label>
 <div class="row">
   <div class="five columns">
     <div class="row collapse">
@@ -204,7 +204,7 @@
       </div>
     </div>
   </div>
-</div></code></pre>
+</div><% end %>
 
         <label>Input with a postfix action (button)</label>
         <div class="row">
@@ -219,7 +219,7 @@
             </div>
           </div>
         </div>
-        <pre><code data-language="html"><label>Input with a prefix character</label>
+        <%= code_block do %><label>Input with a prefix character</label>
 <div class="row">
   <div class="five columns">
     <div class="row collapse">
@@ -231,7 +231,7 @@
       </div>
     </div>
   </div>
-</div></code></pre>
+</div><% end %>
 
         <hr />
         
@@ -252,7 +252,7 @@
           </div>
         </div>
         
-        <pre><code data-language="html"><div class="row">
+        <%= code_block do %><div class="row">
   <div class="five columns">
     <label class="error">Field with Error</label>
     <input type="text" class="error" />
@@ -264,7 +264,7 @@
     <input type="text" />
     <small>Invalid entry</small>
   </div>
-</div></code></pre>
+</div><% end %>
         
         <hr />
 
@@ -350,13 +350,13 @@
 					  <h5>JavaScript Dependency</h5>
 					  <p>The <strong>jquery.foundation.forms.js</strong> is required to make these custom elements work.  Once included it can be initialized like so:</p>
 
-            <pre><code data-language="javascript">$(document).foundationCustomForms();</code></pre>
+            <%= code_block do %>$(document).foundationCustomForms();<% end %>
             
             <p>Once initialized it will look for any checkbox, radio button, or select element and replace it with custom markup that Foundation provides styles for. It will even correctly respect and apply default states for radio, checkbox and select elements. You can use the "checked" or "selected" properties just like normal.</p>
             
             <p>If you want to avoid a potential flash (waiting for js to load and replace your default elements) you can supply the custom markup as part of the page, and the js will instead simply map the custom elements to the inputs.</p>
             
-            <pre><code data-language="html">&lt;form class="custom"&gt;
+            <%= code_block do %>&lt;form class="custom"&gt;
 <!-- No custom markup applied -->
 <label for="radio1">
   <input name="radio1" type="radio" id="radio1"> Radio Button 1
@@ -372,16 +372,16 @@
 <label for="radio2">
   <input name="radio1" type="radio" id="radio2" style="display:none;">
   <span class="custom radio checked"></span> Radio Button 2
-</label>&lt;/form&gt;</code></pre>
+</label>&lt;/form&gt;<% end %>
             
             <p>If you dynamically add inputs to your page you'll need to update the custom markup.  You can safely call the previous function again, but to improve performance you can also scope it to only update a single input.  For example:</p>
             
-            <pre><code data-language="html"><select id="changedSelectInput">
+            <%= code_block do %><select id="changedSelectInput">
   <option>Pick One</option>
-</select></code></pre>
+</select><% end %>
             
-            <pre><code data-language="javascript">// When something changes
-$("#changedSelectInput").foundationCustomForms();</code></pre>
+            <%= code_block do %>// When something changes
+$("#changedSelectInput").foundationCustomForms();<% end %>
             
 					</div>
 
@@ -406,7 +406,7 @@ $("#changedSelectInput").foundationCustomForms();</code></pre>
 
 					<br /><br />
 
-					<pre><code data-language="html"><label for="radio1">
+					<%= code_block do %><label for="radio1">
   <input name="radio1" type="radio" id="radio1" style="display:none;">
   <span class="custom radio"></span> Radio Button 1
 </label>
@@ -419,8 +419,8 @@ $("#changedSelectInput").foundationCustomForms();</code></pre>
 <label for="radio3">
   <input name="radio1" type="radio" id="radio3" disabled style="display:none;">
   <span class="custom radio"></span> Radio Button 3
-</label></code></pre>
-					<pre><code data-language="html"><label for="checkbox1">
+</label><% end %>
+					<%= code_block do %><label for="checkbox1">
   <input type="checkbox" id="checkbox1" style="display: none;">
   <span class="custom checkbox"></span> Label for Checkbox
 </label>
@@ -433,7 +433,7 @@ $("#changedSelectInput").foundationCustomForms();</code></pre>
 <label for="checkbox3">
   <input type="checkbox" id="checkbox3" style="display: none;">
   <span class="custom checkbox"></span> Label for Checkbox
-</label></code></pre>
+</label><% end %>
 
 					<br />
 					<h5>Dropdown / Select Elements</h5>
@@ -463,7 +463,7 @@ $("#changedSelectInput").foundationCustomForms();</code></pre>
 						<option>Look, a third option</option>
 					</select>
 
-				  <pre><code data-language="html"><label for="customDropdown">Dropdown Label</label>
+				  <%= code_block do %><label for="customDropdown">Dropdown Label</label>
 <select style="display:none;" id="customDropdown">
   <option SELECTED>This is a dropdown</option>
   <option>This is another option</option>
@@ -477,7 +477,7 @@ $("#changedSelectInput").foundationCustomForms();</code></pre>
     <li>This is another option</li>
     <li>Look, a third option</li>
   </ul>
-</div></code></pre>
+</div><% end %>
 
 				</form>
 

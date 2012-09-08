@@ -11,7 +11,7 @@
 				  <h5>JavaScript Dependency</h5>
 				  <p>The <strong>jquery.foundation.tabs.js</strong> is required to make the tabs work.  Once included it can be initialized like so:</p>
 				  
-				  <pre><code data-language="javascript">$(document).foundationTabs();</code></pre>
+				  <%= code_block do %>$(document).foundationTabs();<% end %>
 				  
 				</div>
 
@@ -32,7 +32,7 @@
 					<li id="simple3Tab">This is simple tab 3's content. It's only okay.</li>
 				</ul>
 
-				<pre><code data-language="html"><dl class="tabs">
+				<%= code_block do %><dl class="tabs">
   <dd class="active"><a href="#simple1">Simple Tab 1</a></dd>
   <dd><a href="#simple2">Simple Tab 2</a></dd>
   <dd><a href="#simple3">Simple Tab 3</a></dd>
@@ -42,7 +42,7 @@
   <li class="active" id="simple1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
   <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
   <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-</ul></code></pre>
+</ul><% end %>
 
 				<hr />
 
@@ -63,11 +63,11 @@
 					<dd><a href="#evenTab8">Tab 8</a></dd>
 				</dl>
 
-				<pre><code data-language="html"><dl class="tabs three-up">
+				<%= code_block do %><dl class="tabs three-up">
   <dd class="active"><a href="#evenTab1">Even Tab 1</a></dd>
   <dd><a href="#evenTab2">Even Tab 2</a></dd>
   <dd><a href="#evenTab3">Even Tab 3</a></dd>
-</dl></code></pre>
+</dl><% end %>
 
 				<hr />
 
@@ -89,7 +89,7 @@
         	<li id="simpleContained3Tab">This is simple tab 3's content. It's only okay.</li>
         </ul>
 
-				<pre><code data-language="html"><dl class="tabs contained">
+				<%= code_block do %><dl class="tabs contained">
   <dt>Title 1</dt>
   <dd class="active"><a href="#simpleContained1">Simple Tab 1</a></dd>
   <dd><a href="#simpleContained2">Simple Tab 2</a></dd>
@@ -100,7 +100,7 @@
   <li class="active" id="simpleContained1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
   <li id="simpleContained2Tab">This is simple tab 2's content. Now you see it!</li>
   <li id="simpleContained3Tab">This is simple tab 3's content. It's only okay.</li>
-</ul></code></pre>
+</ul><% end %>
 
 				<hr />
 
@@ -113,11 +113,11 @@
         	<dd class="hide-for-small"><a href="#pillTab3">Pill Tab 3</a></dd>
         </dl>
 
-				<pre><code data-language="html"><dl class="tabs pill">
+				<%= code_block do %><dl class="tabs pill">
   <dd class="active"><a href="#pillTab1">Pill Tab 1</a></dd>
   <dd><a href="#pillTab2">Pill Tab 2</a></dd>
   <dd><a href="#pillTab3">Pill Tab 3</a></dd>
-</dl></code></pre>
+</dl><% end %>
 
 				<hr />
 
@@ -130,11 +130,11 @@
         	<dd><a href="#vertical3">Vertical Tab 3</a></dd>
         </dl>
 
-				<pre><code data-language="html"><dl class="nice vertical tabs">
+				<%= code_block do %><dl class="nice vertical tabs">
   <dd class="active"><a href="#vertical1">Vertical Tab 1</a></dd>
   <dd><a href="#vertical2">Vertical Tab 2</a></dd>
   <dd><a href="#vertical3">Vertical Tab 3</a></dd>
-</dl></code></pre>
+</dl><% end %>
 
 				<hr />
 

@@ -3,9 +3,12 @@
   <li class="divider"></li>
   <%= active_link_to "The Grid", 
     features_grid_path, wrap_tag: :li,
-    active: [["features/index"], ["grid"]] %>
+    active: [["features/index"], ["grid"]],
+    class: "js-pjax" %>
   <%= active_link_to "Rapid Prototyping", 
-    features_prototyping_path, wrap_tag: :li %>
+    features_prototyping_path, wrap_tag: :li,
+    class: "js-pjax" %>
   <%= active_link_to "Mobility", 
-    features_mobile_path, wrap_tag: :li %>
+    features_mobile_path, wrap_tag: :li,
+    class: "js-pjax" %>
 </ul>

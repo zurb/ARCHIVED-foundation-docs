@@ -20,12 +20,12 @@
           <strong class="show-for-small">You are on a small screen, like a smartphone.</strong>
 				</p>
 
-				<pre><code data-language="html"><strong class="show-for-xlarge">You are on a very large screen.</strong>
+				<%= code_block do %><strong class="show-for-xlarge">You are on a very large screen.</strong>
 <strong class="show-for-large">You are on a large screen.</strong>
 <strong class="show-for-large-up">You are on a large or very large screen.</strong>
 <strong class="show-for-medium">You are on a medium screen.</strong>
 <strong class="show-for-medium-down">You are on a medium or small screen.</strong>
-<strong class="show-for-small">You are on a small screen, like a smartphone.</strong></code></pre>
+<strong class="show-for-small">You are on a small screen, like a smartphone.</strong><% end %>
 
 				<p>This example uses the opposite rules, so the following text should inversely describe the device you're using:
           <strong class="hide-for-xlarge">You are not on a very large screen.</strong>
@@ -36,12 +36,12 @@
           <strong class="hide-for-small">You are not on a small screen.</strong>
 				</p>
 
-				<pre><code data-language="html"><strong class="hide-for-xlarge">You are not on a very large screen.</strong>
+				<%= code_block do %><strong class="hide-for-xlarge">You are not on a very large screen.</strong>
 <strong class="hide-for-large">You are not on a large screen.</strong>
 <strong class="hide-for-large-up">You are not on a large or very large screen.</strong>
 <strong class="hide-for-medium-down">You are not on a medium or small screen.</strong>
 <strong class="hide-for-medium">You are not on a medium screen.</strong>
-<strong class="hide-for-small">You are not on a small screen.</strong></code></pre>
+<strong class="hide-for-small">You are not on a small screen.</strong><% end %>
 
 				<h5>Orientation Detection</h5>
 				<p>The following text should describe the device you're using:
@@ -49,8 +49,8 @@
           <strong class="show-for-portrait">You are in portrait orientation.</strong>
 				</p>
 
-				<pre><code data-language="html"><strong class="show-for-landscape">You are in landscape orientation.</strong>
-<strong class="show-for-portrait">You are in portrait orientation.</strong></code></pre>
+				<%= code_block do %><strong class="show-for-landscape">You are in landscape orientation.</strong>
+<strong class="show-for-portrait">You are in portrait orientation.</strong><% end %>
 
 				<h5>Touch Detection</h5>
 				<p>The following text should describe the device you're using:
@@ -58,15 +58,15 @@
           <strong class="hide-for-touch">You are not on a touch-enabled device.</strong>
 				</p>
 
-				<pre><code data-language="html"><strong class="show-for-touch">You are on a touch-enabled device.</strong>
-<strong class="hide-for-touch">You are not on a touch-enabled device.</strong></code></pre>
+				<%= code_block do %><strong class="show-for-touch">You are on a touch-enabled device.</strong>
+<strong class="hide-for-touch">You are not on a touch-enabled device.</strong><% end %>
 
 				<p><strong>Note:</strong> These classes have been listed in order of precendence. Touch classes will override orientation, which will override size.</p>
 
         <h5>Media Query Viewer</h5>
         <p>Easily add the ability to show which media query you are currently viewing. To activate the viewer, make sure you have <strong>jquery.foundation.mediaQueryToggle.js</strong> linked up on your page. From there, simply add the markup to your page or press <kbd>M</kbd>. The keyboard toggle won't work on mobile devices so make sure you add the markup in those cases.</p>
 
-        <pre><code data-language="html"><div id="fqv" style="position:fixed;top:4px;left:4px;z-index:999;color:#fff;"><p style="font-size:12px;background:rgba(0,0,0,0.75);padding:5px;margin-bottom:1px;line-height:1.2;"><span class="left">Media:</span> <span style="font-weight:bold;" class="show-for-xlarge">Extra Large</span><span style="font-weight:bold;" class="show-for-large">Large</span><span style="font-weight:bold;" class="show-for-medium">Medium</span><span style="font-weight:bold;" class="show-for-small">Small</span><span style="font-weight:bold;" class="show-for-landscape">Landscape</span><span style="font-weight:bold;" class="show-for-portrait">Portrait</span><span style="font-weight:bold;" class="show-for-touch">Touch</span></p></div></code></pre>
+        <%= code_block do %><div id="fqv" style="position:fixed;top:4px;left:4px;z-index:999;color:#fff;"><p style="font-size:12px;background:rgba(0,0,0,0.75);padding:5px;margin-bottom:1px;line-height:1.2;"><span class="left">Media:</span> <span style="font-weight:bold;" class="show-for-xlarge">Extra Large</span><span style="font-weight:bold;" class="show-for-large">Large</span><span style="font-weight:bold;" class="show-for-medium">Medium</span><span style="font-weight:bold;" class="show-for-small">Small</span><span style="font-weight:bold;" class="show-for-landscape">Landscape</span><span style="font-weight:bold;" class="show-for-portrait">Portrait</span><span style="font-weight:bold;" class="show-for-touch">Touch</span></p></div><% end %>
 
 				<hr />
 
@@ -77,8 +77,8 @@
 				  <h5>JavaScript Dependency</h5>
 				  <p>The <strong>jquery.foundation.alerts.js</strong> is required if you want the alert close buttons to work.  It can be initialized like so:</p>
 				  
-				  <pre><code data-language="javascript">$(document).foundationAlerts();
-          </code></pre>
+				  <%= code_block do %>$(document).foundationAlerts();
+          <% end %>
 				  
 				</div>
 
@@ -102,10 +102,10 @@
 					<a href="" class="close">&times;</a>
 				</div>
 
-				<pre><code data-language="html"><div class="alert-box [success alert secondary]">
+				<%= code_block do %><div class="alert-box [success alert secondary]">
   This is an alert box.
   <a href="" class="close">&times;</a>
-</div></code></pre>
+</div><% end %>
 
 				<hr />
 
@@ -131,7 +131,7 @@
 
         <p><span class="radius label">Example Label</span> This label could read a date for an update or it could include an author name or anything really. Inline labels are pretty handy when you need to draw attention or visually separate a short piece of content.</p>
 
-        <pre><code data-language="html"><p><span class="[radius, round] [secondary, alert, success] label">Example Label</span> This label could read a date for an update, or it could include an author name, or anything really. Inline labels are pretty handy when you need to draw attention or visually separate a short piece of content.</p></code></pre>
+        <%= code_block do %><p><span class="[radius, round] [secondary, alert, success] label">Example Label</span> This label could read a date for an update, or it could include an author name, or anything really. Inline labels are pretty handy when you need to draw attention or visually separate a short piece of content.</p><% end %>
 
         <hr />
 
@@ -144,19 +144,19 @@
 				  <h5>JavaScript Dependency</h5>
 				  <p>The <strong>jquery.foundation.tooltips.js</strong> is required to make the tooltips work.  Once included it can be initialized like so:</p>
 				  
-				  <pre><code data-language="javascript">$(document).tooltips();</code></pre>
+				  <%= code_block do %>$(document).tooltips();<% end %>
 				  
 				</div>
 
 				<p>The tooltips can be positioned on the <span class="has-tip" data-width="210" title="I'm on bottom and the default position.">"tip-bottom"</span>, which is the default position, <span class="has-tip tip-top noradius" data-width="210" title="I'm on the top and I'm not rounded!">"tip-top" (hehe)</span>, <span class="has-tip tip-left" data-width="90" title="I'm on the left!">"tip-left"</span>, or <span class="has-tip tip-right" data-width="120" title="I'm on the right!">"tip-right"</span> of the target element. On a small device, the tooltips are full width and bottom aligned.</p>
 
-				<pre><code data-language="html"><span class="has-tip" data-width="210" title="I'm on bottom and the default position.">"tip-bottom"</span>
+				<%= code_block do %><span class="has-tip" data-width="210" title="I'm on bottom and the default position.">"tip-bottom"</span>
 
 <span class="has-tip tip-top noradius" data-width="210" title="I'm on the top and I'm not rounded!">"tip-top"</span>
 
 <span class="has-tip tip-left" data-width="90" title="I'm on the left!">"tip-left"</span>
 
-<span class="has-tip tip-right" data-width="90" title="I'm on the right!">"tip-right"</span></code></pre>
+<span class="has-tip tip-right" data-width="90" title="I'm on the right!">"tip-right"</span><% end %>
 				
 				<hr />
 				
@@ -167,7 +167,7 @@
 				  <h5>JavaScript Dependency</h5>
 				  <p>The <strong>jquery.foundation.accordion.js</strong> is required to make the accordion work.  Once included it can be initialized like so:</p>
 				  
-				  <pre><code data-language="javascript">$(document).foundationAccordion();</code></pre>
+				  <%= code_block do %>$(document).foundationAccordion();<% end %>
 				  
 				</div>
 				
@@ -206,7 +206,7 @@
 				<h4>Keystrokes</h4>
 				<p>If you have keyboard affordances you might need to explain them, and to that end there's a simple keystroke character affordance in Foundation.</p>
 				<p>For example, to close your browser hit <kbd>Cmd</kbd> + <kbd>Q</kbd>. Don't actually do it. There's more docs to read.</p>
-				<pre><code data-language="html"><kbd>Cmd</kbd></code></pre>
+				<%= code_block do %><kbd>Cmd</kbd><% end %>
 
 				<hr />
 
@@ -228,7 +228,7 @@
           </div>
         </div>
 
-				<pre><code data-language="html"><div class="panel">
+				<%= code_block do %><div class="panel">
   <h5>This is a regular panel.</h5>
   <p>It has an easy to override visual style, and is appropriately subdued.</p>
 </div>
@@ -236,7 +236,7 @@
 <div class="panel callout radius">
   <h5>This is a callout panel.</h5>
   <p>It's a little ostentatious, but useful for important content (like the Foundation 3 Download panel).</p>
-</div></code></pre>
+</div><% end %>
 
 				<hr />
 
@@ -251,13 +251,13 @@
           <li><a href="#">Link 5</a></li>
         </ul>
 
-        <pre><code data-language="html"><ul class="link-list">
+        <%= code_block do %><ul class="link-list">
   <li><a href="#">Link 1</a></li>
   <li><a href="#">Link 2</a></li>
   <li><a href="#">Link 3</a></li>
   <li><a href="#">Link 4</a></li>
   <li><a href="#">Link 5</a></li>
-</ul></code></pre>
+</ul><% end %>
 				
         <hr />
       
@@ -332,7 +332,7 @@
 					</li>
 				</ul>
 				
-				<pre><code data-language="html"><div class="flex-video">
+				<%= code_block do %><div class="flex-video">
   <iframe width="420" height="315" src="http://www.youtube.com/embed/9otNWTHOJi8" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -342,7 +342,7 @@
 
 <div class="flex-video widescreen vimeo">
   <iframe src="http://player.vimeo.com/video/21762736?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-</div></code></pre>
+</div><% end %>
 
   		</div>
   		<div class="four columns">

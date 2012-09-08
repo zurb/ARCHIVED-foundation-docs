@@ -11,7 +11,7 @@
 				  <h5>JavaScript Dependency</h5>
 				  <p>The <strong>jquery.foundation.navigation.js</strong> is required to make the navigation work.  Once included it can be initialized like so:</p>
 				  
-				  <pre><code data-language="javascript">$(document).foundationNavigation();</code></pre>
+				  <%= code_block do %>$(document).foundationNavigation();<% end %>
 				  
 				</div>
 
@@ -68,7 +68,7 @@
           </li>
         </ul>
 
-        <pre><code data-language="html"><ul class="nav-bar">
+        <%= code_block do %><ul class="nav-bar">
   <li class="active"><a href="#">Nav Item 1</a></li>
   <li class="has-flyout">
     <a href="#">Nav Item 2</a>
@@ -80,12 +80,12 @@
     </ul>
   </li>
   ...
-</ul></code></pre>
+</ul><% end %>
         
         <h5>Dropdown Lists</h5>
         <p>In the nav bar you can use a dropdown to only contain a <code>ul</code> of anchors, which will act as a dropdown on hover. The individual entry includes a main link (which can lead to a top-level page) and the dropdown element. Note that dropdowns require the parent to have <code>.has-flyout</code>.
 
-        <pre><code data-language="html"><li class="has-flyout">
+        <%= code_block do %><li class="has-flyout">
   <a href="#">Nav Item 2</a>
   <a href="#" class="flyout-toggle"><span> </span></a>
   <ul class="flyout">
@@ -95,12 +95,12 @@
     <li><a href="#">Sub Nav 4</a></li>
     <li><a href="#">Sub Nav Item 5</a></li>
   </ul>
-</li></code></pre>
+</li><% end %>
 
         <h5>Arbitrary Content Dropdowns</h5>
         <p>You can also have dropdowns with a specific size which can contain any kind of content, including rows and columns.</p>
 
-        <pre><code data-language="html"><li class="has-flyout">
+        <%= code_block do %><li class="has-flyout">
   <a href="#">Nav Item 3</a>
   <a href="#" class="flyout-toggle"><span> </span></a>
   <div class="flyout [small, large]">
@@ -114,13 +114,13 @@
       </div>
     </div>
   </div>
-</li></code></pre>
+</li><% end %>
 
         <h5>Flyout Direction</h5>
         <p>Flyouts are pinned left by default, but you can pin them right in instances where they may run off the page or over other content by adding <code>.right</code> to the <code>div.flyout</code> element.</p>
         <p>Flyouts also go down by default, but if your nav bar is on the bottom you can have the flyouts expand up by adding a class of <code>.up</code> to the <code>.flyout</code> element.</p>
 
-        <pre><code data-language="html"><li class="has-flyout">
+        <%= code_block do %><li class="has-flyout">
   <a href="#">Nav Item 4</a>
   <a href="#" class="flyout-toggle"><span> </span></a>
   <div class="flyout large right">
@@ -150,7 +150,7 @@
       </div>
     </div>
   </div>
-</li></code></pre>
+</li><% end %>
 
 				<hr />
 
@@ -211,13 +211,13 @@
           <li><a href="#">Link 4</a></li>
         </ul>
 
-        <pre><code data-language="html"><ul class="side-nav">
+        <%= code_block do %><ul class="side-nav">
   <li class="active"><a href="#">Link 1</a></li>
   <li><a href="#">Link 2</a></li>
   <li class="divider"></li>
   <li><a href="#">Link 3</a></li>
   <li><a href="#">Link 4</a></li>
-</ul></code></pre>
+</ul><% end %>
 
 				<hr />
 
@@ -232,13 +232,13 @@
         	<dd><a href="#">Suspended</a></dd>
         </dl>
 
-	      <pre><code data-language="html"><dl class="sub-nav">
+	      <%= code_block do %><dl class="sub-nav">
   <dt>Filter:</dt>
   <dd class="active"><a href="#">All</a></dd>
   <dd><a href="#">Active</a></dd>
   <dd><a href="#">Pending</a></dd>
   <dd><a href="#">Suspended</a></dd>
-</dl></code></pre>
+</dl><% end %>
 
 	      <hr />
 
@@ -257,7 +257,7 @@
         	<li class="arrow"><a href="">&raquo;</a></li>
         </ul>
 
-        <pre><code data-language="html"><ul class="pagination">
+        <%= code_block do %><ul class="pagination">
   <li class="arrow unavailable"><a href="">&laquo;</a></li>
   <li class="current"><a href="">1</a></li>
   <li><a href="">2</a></li>
@@ -267,7 +267,7 @@
   <li><a href="">12</a></li>
   <li><a href="">13</a></li>
   <li class="arrow"><a href="">&raquo;</a></li>
-</ul></code></pre>
+</ul><% end %>
 
         <hr>
 
@@ -288,7 +288,7 @@
           <li class="current"><span>Home</span></li>
         </ul>
         
-        <pre><code data-language="html"><ul class="breadcrumbs">
+        <%= code_block do %><ul class="breadcrumbs">
   <li><a href="#">Home</a></li>
   <li><a href="#">Features</a></li>
   <li class="unavailable"><a href="#">Gene Splicing</a></li>
@@ -300,7 +300,7 @@
   <li><span>Features</span></li>
   <li><span>Gene Splicing</span></li>
   <li class="current"><span>Home</span></li>
-</ul></code></pre>
+</ul><% end %>
 
 
   		</div>

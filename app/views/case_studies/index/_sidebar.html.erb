@@ -3,16 +3,22 @@
   <li><%= link_to root_path do %>&larr; Home<% end %></li>
   <li class="divider"></li>
   <%= active_link_to "Flite", 
-    case_studies_flite_path, wrap_tag: :li %>
+    case_studies_flite_path, wrap_tag: :li,
+    class: "js-pjax" %>
   <%= active_link_to "Swizzle", 
     case_studies_swizzle_path, wrap_tag: :li,
-    active: [["case_studies/index"],["swizzle"]] %>
+    active: [["case_studies/index"],["swizzle"]],
+    class: "js-pjax" %>
   <%= active_link_to "ZURBsoapbox", 
-    case_studies_soapbox_path, wrap_tag: :li %>
+    case_studies_soapbox_path, wrap_tag: :li,
+    class: "js-pjax" %>
   <%= active_link_to "Reel", 
-    case_studies_reel_path, wrap_tag: :li %>
+    case_studies_reel_path, wrap_tag: :li,
+    class: "js-pjax" %>
   <%= active_link_to "ZURBjobs", 
-    case_studies_zurbjobs_path, wrap_tag: :li %>
+    case_studies_zurbjobs_path, wrap_tag: :li,
+    class: "js-pjax" %>
   <%= active_link_to "WCB", 
-    case_studies_wcb_path, wrap_tag: :li %>
+    case_studies_wcb_path, wrap_tag: :li,
+    class: "js-pjax" %>
 </ul>

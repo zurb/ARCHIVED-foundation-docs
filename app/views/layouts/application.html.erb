@@ -24,6 +24,15 @@
   
 	<!-- Included JS Files  -->
 	<%= javascript_include_tag "application" %>
+	<script type="text/javascript" charset="utf-8">
+    <% if Rails.env.development? %>
+    $.pjax.defaults.timeout = false;
+    <% end %>
+    // Only some pages should use PJAX
+    // $('.js-pjax a').pjax('[data-pjax-container]');
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+	</script>
   
   <%= csrf_meta_tags %>
   
@@ -34,7 +43,9 @@
 </head>
 <body>
   <%= render "top_bar" %>
+  <div data-pjax-container>
   <%= yield %>
+  </div>
   <%= render "footer" %>
   <% if false %>
   <%= render "google_analytics" %>

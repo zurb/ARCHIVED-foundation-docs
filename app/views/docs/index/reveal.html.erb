@@ -14,23 +14,23 @@
 
 			  <h5>Markup</h5>
 				<p><strong>Remember:</strong> your modal should be at the end of the page, after any of your rows or columns.</p>
-				<pre><code data-language="html"><div id="myModal" class="reveal-modal">
+				<%= code_block do %><div id="myModal" class="reveal-modal">
   <h2>Awesome. I have it.</h2>
   <p class="lead">Your couch.  I it's mine.</p>
   <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
   <a class="close-reveal-modal">&#215;</a>
-</div></code></pre>
+</div><% end %>
 
 				<h5>Calling Reveal</h5>
 	   		<p>There are two ways to do call a Reveal modal. The first is to attach a handler to something (button most likely) then call Reveal:</p>
-				<pre><code data-language="javascript">$(document).ready(function() {
+				<%= code_block do %>$(document).ready(function() {
   $('#buttonForModal').click(function() {
     $('#myModal').reveal();
   });
-});</code></pre>
+});<% end %>
 
 				<p>The new hotness: just add a data-reveal-id to the object which you want to fire the modal when clicked...</p>
-				<pre><code data-language="html"><a href="#" class="button" data-reveal-id="myModal2">Click Me For A Modal</a></code></pre>
+				<%= code_block do %><a href="#" class="button" data-reveal-id="myModal2">Click Me For A Modal</a><% end %>
 
 				<p>This will launch the modal with the ID "myModal2" without attaching a handler or calling the plugin (since the plugin is always listening for this). You can also pass any of the parameters simply by putting a data-nameOfParameter="value" (i.e. data-animation="fade")</p>
 
@@ -39,16 +39,16 @@
 				<hr />
 
 				<h4>Options</h4>
-				<pre><code data-language="javascript">$('#myModal').reveal({
+				<%= code_block do %>$('#myModal').reveal({
      animation: 'fadeAndPop', //fade, fadeAndPop, none
      animationspeed: 300, //how fast animations are
      closeOnBackgroundClick: true, //if you click background will modal close?
      dismissModalClass: 'close-reveal-modal' //the class of a button or element that will close an open modal
-});</code></pre>
+});<% end %>
 
 				<p>Options can be used on the "data-reveal-id" implementation too, just do it like this:</p>
 
-				<pre><code data-language="html"><a href="#" data-reveal-id="myModal" data-animation="fadeAndPop" data-animationspeed="300" data-closeonbackgroundclick="true" data-dismissmodalclass="close-reveal-modal">Click for a modal</a></code></pre>
+				<%= code_block do %><a href="#" data-reveal-id="myModal" data-animation="fadeAndPop" data-animationspeed="300" data-closeonbackgroundclick="true" data-dismissmodalclass="close-reveal-modal">Click for a modal</a><% end %>
 
   		</div>
   		<div class="four columns">

@@ -27,16 +27,16 @@ Wireframe Prototype</p>
         	  </a>
         	</div>
         	<div class="four columns">
-        	  <a href="prototype-example2.php" target="_blank">
+        	  <%= link_to examples_prototype_path(id:2), target: "_blank" do %>
         	    <%= image_tag "feature-prototyping-3.png" %>
         	    <p>Games Site</p>
-        	  </a>
+        	  <% end %>
         	</div>
         	<div class="four columns">
-        	  <a href="prototype-example3.php" target="_blank">
+        	  <%= link_to examples_prototype_path(id:3), target: "_blank" do %>
         	    <%= image_tag "feature-prototyping-4.png" %>
         	    <p>Social App</p>
-        	  </a>
+        	  <% end %>
         	</div>
         </div>
 

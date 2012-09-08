@@ -20,18 +20,17 @@
 				<h5>Setting Up Your Slider</h5>
 				<p>Your Orbit slider is simply a <code>div</code> with a unique ID. For our examples we'll use <code>&lt;div id="featured"&gt;</code>, an example of which you can see above. The markup looks like this:</p>
 
-				<pre><code data-language="html"><div id="featured">
-  <%= image_tag "../images/orbit-demo/demo1.jpg" %>
-  <%= image_tag "../images/orbit-demo/demo2.jpg" %>
-  <%= image_tag "../images/orbit-demo/demo3.jpg" %>
-</div></code></pre>
+				<%= code_block do %><div id="featured">
+  <%= image_tag "orbit-demo/demo1.jpg" %>
+  <%= image_tag "orbit-demo/demo2.jpg" %>
+  <%= image_tag "orbit-demo/demo3.jpg" %>
+</div><% end %>
 
 				<h5>Activating Orbit</h5>
 				<p>With your <code>#featured</code> element in place, we just need to call Orbit. <strong>Remember:</strong> your call to Orbit needs to come <em>after</em> you've included jQuery and foundation.js. By default, those are at the end of your document, so this code snippet should come at the very end:</p>
-				<pre><code data-language="javascript">$(window).load(function() {
-       $('#featured').orbit();
-   });
-</code></pre>
+				<%= code_block do %>$(window).load(function() {
+   $('#featured').orbit();
+});<% end %>
 
 				<p>That's all you need to trigger Orbit on a series of images. It includes the timer element, and the left and right hand paddles.</p>
 
@@ -40,7 +39,7 @@
 				<h4>Options</h4>
 				<p>Orbit has a number of options available, which you can specify when you call <code>.orbit()</code>. In the example above, we kept all of the default values, but you can optionally use any of these options:</p>
 
-				<pre><code data-language="javascript">$('#featured').orbit({
+				<%= code_block do %>$('#featured').orbit({
    animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
    animationSpeed: 800,                // how fast animtions are
    timer: true, 			 // true or false to have the timer
@@ -59,7 +58,7 @@
    afterSlideChange: function(){}, 	 // empty function 
    fluid: true                         // or set a aspect ratio for content slides (ex: '4x3') 
 });
-</code></pre>
+<% end %>
 
 				<hr />
 
@@ -79,16 +78,11 @@
           <div>
             <h4>What? You didn't click it?</h4>
             <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
-            <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
-            <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
-            <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
-            <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
-            <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
           </div>
         </div>
 
         <p>
-          <pre><code data-language="html"><div id="featuredContent">
+          <%= code_block do %><div id="featuredContent">
   <div>
     <h4>This is a content slider.</h4>
     <p>Each slide holds arbitrary content, like text or actions.</p>
@@ -102,11 +96,11 @@
     <h4>What? You didn't click it?</h4>
     <p>We'll give you the benefit of the doubt. Maybe you did, and now you're back!</p>
   </div>
-</div></code></pre>
+</div><% end %>
 
-          <pre><code data-language="javascript">$(window).load(function() {
+          <%= code_block do %>$(window).load(function() {
    $('#featuredContent').orbit({ fluid: '16x6' });
-});</code></pre>
+});<% end %>
         </p>
 
         <p><strong>Note:</strong> We put some simple styles on our content slider, notably a background and padding on the <code>div</code> elements. Orbit stacks your slides, so transparent slides will will be visible on top of each other.</p>
@@ -118,11 +112,11 @@
 
         <p>For example, if we want Orbit to load a simple light grey screen with a spinner, the CSS would look like this:</p>
 
-        <pre><code data-language="css">#featured { background: url(spinner.gif) center center #f4f4f4; height: 300px; }
+        <%= code_block do %>#featured { background: url(spinner.gif) center center #f4f4f4; height: 300px; }
 #featured img { display: none; }
 
 #featured.orbit { background: none; }
-#featured.orbit img { display: block; }</code></pre>
+#featured.orbit img { display: block; }<% end %>
 
         <p>We hide the images by default, and give the <code>#featured</code> block a fixed height and background with a spinner. Once Orbit loads the images are displayed and we remove that background.</p>
 
@@ -139,8 +133,6 @@
 </div>
 
 <script type="text/javascript">
-  $(window).load(function() {
-    $("#featured").orbit();
-    $('#featuredContent').orbit({ fluid: '2x1' });
-  });
+$("#featured").orbit();
+$('#featuredContent').orbit({ fluid: '2x1' });
 </script>

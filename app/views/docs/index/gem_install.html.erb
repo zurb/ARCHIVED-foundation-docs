@@ -26,16 +26,16 @@
             <a name="installing"></a>
             <h4>Installation</h4>
             <p>To create your first project using our Compass extension, you'll need to have the zurb-foundation gem installed. This includes all the necessary dependencies that you'll need to get going.</p>
-            <pre><code data-language="shell">> [sudo] gem install zurb-foundation</code></pre>
-            <em style="position: relative; top: -20px; font-size: 12px;">Note: Make sure you aren't using 'ZURB-foundation' as that is the 2.2 version.</em>
+            <%= code_block do %>> [sudo] gem install zurb-foundation<% end %>
+            <em style="position: relative; font-size: 12px;">Note: Make sure you aren't using 'ZURB-foundation' as that is the 2.2 version.</em>
 
             <h5>Installation Release Candidate Versions of the Gem</h5>
             <p>You can use pre-release versions of the gem as we update them. We use these as a way to try out changes to the gem before we feel 100% comfortable with calling it final. We usually release final versions on Fridays.</p>
             <p class="btm-marg keystroke">[sudo] gem install zurb-foundation --pre</p>
 
             <h5>Creating Your first project</h5>
-            <pre><code data-language="shell">> cd path/to/where-you-want-your-project
-> compass create &lt;project-name&gt; -r zurb-foundation --using foundation</code></pre>
+            <%= code_block do %>> cd path/to/where-you-want-your-project
+> compass create &lt;project-name&gt; -r zurb-foundation --using foundation<% end %>
 
             <p class="btm-marg">Now you should have a new project folder created with foundation included along with all the awesome advantages that comes with <a href="http://sass-lang.com/" rel="nofollow">Sass</a> and <a href="http://compass-style.org/" rel="nofollow">Compass</a>.</p>
             
@@ -83,11 +83,11 @@
               <li><strong>$totalColumns:</strong> Adjust how many columns are in the grid.</li>
               <li><strong>$mobileTotalColumns:</strong> Adjust how many columns in the mobile grid.</li>
             </ul>            
-            <pre><code data-language="css">// Grid Settings
+            <%= code_block do %>// Grid Settings
 $rowWidth: 1000px;
 $columnGutter: 30px;
 $totalColumns: 12;
-$mobileTotalColumns: 4;</code></pre>
+$mobileTotalColumns: 4;<% end %>
 
             <h5>Colors</h5>
             <ul class="disc">
@@ -103,7 +103,7 @@ $mobileTotalColumns: 4;</code></pre>
               <li><strong>$darkEdge:</strong> Adjust the dark edge inner box-shadow of buttons, etc.</li>
             </ul>
             <!-- <span class="btm-marg"><script src="https://gist.github.com/3008672.js?file=color-settings.scss"></script></span> -->
-            <pre><code data-language="css">// Colors Settings
+            <%= code_block do %>// Colors Settings
 $mainColor: #2ba6cb;
 $secondaryColor: #e9e9e9;
 $alertColor: #c60f13;
@@ -113,7 +113,7 @@ $highlightColor: #ffff99;
 $black: #000;
 $white: #fff;
 $shinyEdge: rgba(#fff, .5);
-$darkEdge: rgba(#000, .2);</code></pre>
+$darkEdge: rgba(#000, .2);<% end %>
 
                           <h5>Button Settings</h5>
             <ul class="disc">
@@ -121,12 +121,14 @@ $darkEdge: rgba(#000, .2);</code></pre>
               <li><strong>$btnBase:</strong> Adjust the size of your buttons based on their top/bottom padding.</li>
               <li><strong>$[tiny, small, large]BtnBase:</strong> Adjust the ratio that your buttons scale by adjust this math.</li>
             </ul>
-            <pre><code data-language="css">// Button Settings
+            <%= code_block do %>
+// Button Settings
 $buttonRadius: 3px;
 $btnBase: 10px;
 $tinyBtnBase: $btnBase - 5;
 $smallBtnBase: $btnBase - 3;
-$largeBtnBase: $btnBase + 5;</code></pre>
+$largeBtnBase: $btnBase + 5;
+            <% end %>
 
             <h5>Typography Settings <small>These require modular-scale, which comes with Foundation</small></h5>
             <ul class="disc">
@@ -140,7 +142,7 @@ $largeBtnBase: $btnBase + 5;</code></pre>
               <li><strong>$baseFontSize:</strong> Change the base paragraph size for modular-scale.</li>
               <li><strong>$importantModNum:</strong> Change the important number for modular-scale.</li>
             </ul>
-            <pre><code data-language="css">// Typography Settings
+            <%= code_block do %>// Typography Settings
 
 $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $headerFontWeight: bold;
@@ -155,7 +157,7 @@ $bodyFontColor: $txtColor;
 
 $ratio: $golden;
 $baseFontSize: 14px;
-$importantModNum: 44px;</code></pre>
+$importantModNum: 44px;<% end %>
 
             <h5>Other UI Settings</h5>
             <ul class="disc">
@@ -179,7 +181,7 @@ $importantModNum: 44px;</code></pre>
               <li><strong>$tooltipFontSizeScreenSmall:</strong> Font size for tooltips on mobile.</li>
               <li><strong>$tooltipBackgroundOpacityScreenSmall:</strong> Background opacity for tooltips on mobile.</li>
             </ul>
-            <pre><code data-language="css">// Form Settings
+            <%= code_block do %>// Form Settings
 $formSpacing: 12px;
 
 // Tab Settings
@@ -204,7 +206,7 @@ $tapToCloseFontSize: 10;
 $tapToCloseFontWeight: normal;
 $tapToCloseFontColor: #888;
 $tooltipFontSizeScreenSmall: 14;
-$tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
+$tooltipBackgroundOpacityScreenSmall: 0.85;<% end %>
 
             <hr>
 
@@ -215,15 +217,15 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
 
             <h5>Basic Import (The Kitchen Sink)</h5>
             <p>By default, these settings are uncommented which included all of Foundation. You will always want to keep your settings uncommented, but you can uncomment the second import when you are customizing.</p>
-            <pre><code data-language="css">// You custom settings file to override Foundation defaults
+            <%= code_block do %>// You custom settings file to override Foundation defaults
 @import "settings";
 
 // Comment out this import if you are customizing you imports below
-@import "foundation";</code></pre>
+@import "foundation";<% end %>
 
             <h5>Customizing Your Imports</h5>
             <p>When you are customizing, you must always include this set of files to ensure proper behavior.</p>
-            <pre><code data-language="css">// ----------------------------------------
+            <%= code_block do %>// ----------------------------------------
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
@@ -231,10 +233,10 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
 // @import "foundation/settings";
 // @import "foundation/function/all";
 // @import "foundation/common/globals";
-// @import "foundation/mixins/clearfix";</code></pre>
+// @import "foundation/mixins/clearfix";<% end %>
 
             <p>The next bit of code controls which common elements get included. Certain elements will throw an error to let you know if they rely on a mixin you haven't included.</p>
-            <pre><code data-language="css">// Control which mixins you have access too
+            <%= code_block do %>// Control which mixins you have access too
 
 // @import "foundation/mixins/css-triangle";
 // @import "foundation/mixins/font-size";
@@ -251,10 +253,10 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
 // Control which common styles get compiled
 
 // @import "foundation/common/typography";
-// @import "foundation/common/forms";</code></pre>
+// @import "foundation/common/forms";<% end %>
 
             <p>Finally, you can control which components are compiled at the top of your app.css file by uncommenting what you desire.</p>
-            <pre><code data-language="css">// Control which components you get if customizing
+            <%= code_block do %>// Control which components you get if customizing
 
 // @import "foundation/components/modules/buttons";
 // @import "foundation/components/modules/tabs";
@@ -262,7 +264,7 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
 // @import "foundation/components/modules/navbar";
 // @import "foundation/components/modules/orbit";
 // @import "foundation/components/modules/reveal";
-// @import "foundation/components/modules/offcanvas";</code></pre>
+// @import "foundation/components/modules/offcanvas";<% end %>
 
             <p><strong>Note: Watch for Compass to throw errors to let you know what you aren't including.</strong></p>
             <hr>
@@ -290,7 +292,7 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
             </ul>
             <span>
               <strong>Markup Example:</strong>
-              <pre><code data-language="html"><header>
+              <%= code_block do %><header>
   <aside></aside>
   <section>
     <article>
@@ -298,11 +300,11 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
       <div></div>
     </article>
   </section>
-</header></code></pre>
+</header><% end %>
             </span>
             <span class="btm-marg">
               <strong>SCSS Example:</strong>
-              <pre><code data-language="css">header { @include outerRow();
+              <%= code_block do %>header { @include outerRow();
   aside { @include column(4); }
   section { @include column(8); 
     article { @include innerRow();
@@ -311,7 +313,7 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
       div { @include column(10); }
     }
   }
-}</code></pre>
+}<% end %>
             </span>
 
             <h5>Modular Scale</h5>
@@ -319,18 +321,18 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
             <ul class="disc">
               <li><strong>ms(#);</strong> Tell your font which number from the scale to use.</li>
             </ul>
-            <pre><code data-language="css">.element {
+            <%= code_block do %>.element {
   font-size: ms(0); /* 0 = first in scale, 1,2,3 and so on... */
-}</code></pre>
+}<% end %>
 
             <h5>Font Size</h5>
             <p>If you feel like breaking out of the modular scale or not using the provided function, you can use our font-size mixin!</p>
             <ul class="disc">
               <li><strong>@include font-size(size);</strong> Outputs 'px' and 'rem' for the number you include!</li>
             </ul>
-            <pre><code data-language="css">.element {
+            <%= code_block do %>.element {
   @include font-size(18);
-}</code></pre>
+}<% end %>
 
             <h5>CSS Triangles</h5>
             <p>If you are unfamiliar with CSS triangles, learn more <a href="http://css-tricks.com/snippets/css/css-triangle/">here.</a> We use them all over in foundation for things like the arrows in dropdowns and pips on tooltips flyouts.</p>
@@ -338,9 +340,9 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
             <ul class="disc">
               <li><strong>@include cssTriangle(size, color, direction);</strong> Easily create awesome triangles!</li>
             </ul>
-            <pre><code data-language="css">.element {
+            <%= code_block do %>.element {
   @include cssTriangle(5px, #ff0000, [top, bottom, left, right]);
-}</code></pre>
+}<% end %>
 
           </li>
 
@@ -364,24 +366,24 @@ $tooltipBackgroundOpacityScreenSmall: 0.85;</code></pre>
             <h4>Gemfile</h4>
             <p>First you'll want to add the following gems to the <strong>assets</strong> group in your Gemfile like so:</p>
 
-            <pre><code data-language="ruby">group :assets do
+            <%= code_block do %>group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
   # Add these gems
   gem 'compass-rails', '~> 1.0.3'
   gem 'zurb-foundation', '~> 3.0.9'
-end</code></pre>
+end<% end %>
 
             <p>Then run <strong>bundle install</strong> to install these gems.  You may see the following error:</p>
 
-            <pre><code data-language="shell">Bundler could not find compatible versions for gem "sass":
+            <%= code_block do %>Bundler could not find compatible versions for gem "sass":
 In snapshot (Gemfile.lock):
   sass (3.1.20)
 
 In Gemfile:
   zurb-foundation (~> 3.0.0) ruby depends on
-    sass (= 3.2.0.alpha.244) ruby</code></pre>
+    sass (= 3.2.0.alpha.244) ruby<% end %>
 
             <p>If you see that don't panic, just run <strong>bundle update sass</strong> and you should be on your merry way!</p>
 
@@ -406,32 +408,32 @@ In Gemfile:
             <h5>Layout</h5>
             <p>Add the following to the <strong>&lt;head&gt;</strong> tag of your page layouts (i.e. <strong>app/views/layouts/application.html.erb</strong>) to set the viewport width for mobile devices.</p>
 
-            <pre><code data-language="html"><!-- 
+            <%= code_block do %><!-- 
 Place this in <head></head>
 Set the viewport width to device width for mobile
 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /></code></pre>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><% end %>
 
             <h5>SASS Files</h5>
             <p>Since Foundation is now SASSified you'll need to include it a little differently.  If you're using a standard Rails installation you should rename <strong>application.css</strong> to <strong>application.scss</strong> in the <strong>app/assets/stylesheets</strong> directory.</p>
 
-            <pre><code data-language="css">@import "foundation";</code></pre>
+            <%= code_block do %>@import "foundation";<% end %>
 
             <p>That will import all the foundation related styles into your application.  Take a look at the other documentation pages if you'd like to further customize the stylesheet that gets generated.</p>
 
             <h5>Javascripts</h5>
             <p>To include all the Foundation related javascripts on your page add <strong>=require foundation</strong> to your <strong>app/assets/javascripts/application.js</strong> sprockets manifest file.</p>
-            <pre><code data-language="javascript">//= require foundation
-//= require foundation/app</code></pre>
+            <%= code_block do %>//= require foundation
+//= require foundation/app<% end %>
 
             <a name="upgrading"></a>
             <h4>Upgrading from 2.X</h4>
 
             <p>For those of you upgrading from a previous version of the gem things are a little different.  In your <strong>app/assets/stylesheets/application.css</strong> you probably had a bit of code like this:</p>
 
-            <pre><code data-language="css">/*
+            <%= code_block do %>/*
 =require foundation
-*/</code></pre>
+*/<% end %>
 
             <p>Just rename <strong>application.css</strong> to <strong>application.scss</strong> making sure to replace any <strong>=require</strong> to the sass <strong>@import</strong> syntax.</p>
 

@@ -1,6 +1,8 @@
 FoundationDocs::Application.routes.draw do
   root to: "index#home"
   get "download"     => "index#download"
+  get "whats-new"    => "index#whats_new", as: :whats_new
+  get "migration"    => "index#migration"
   
   namespace :docs do
     root to: "index#home"
@@ -21,9 +23,15 @@ FoundationDocs::Application.routes.draw do
   
   namespace :features do
     root to: "index#grid"
-    get "grid"        => "index#grid"
-    get "prototyping" => "index#prototyping"
-    get "mobile"      => "index#mobile"
+    get "grid"            => "index#grid"
+    get "prototyping"     => "index#prototyping"
+    get "mobile"          => "index#mobile"
+  end
+  
+  namespace :examples do
+    get "mobile/:id"    => "mobile#show", as: :mobile
+    get "grid/:id"      => "grid#show", as: :grid
+    get "prototype/:id" => "prototype#show", as: :prototype
   end
   
   namespace :case_studies do

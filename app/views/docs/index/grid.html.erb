@@ -9,14 +9,14 @@
 				<p>The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns; columns create the actual structure. For layouts to work properly, always put your page content inside a row and a column.</p>
 
 				<p>What you need to know is that <strong>columns don't have a fixed width.</strong> They can vary based on the resolution of the screen, or the size of the window (try scaling down this window to see what we mean). Design with that in mind.</p>
-        <pre><code data-language="html"><div class="row">
+        <%= code_block do %><div class="row">
   <div class="eight columns">
     Main content...
   </div>
   <div class="four columns">
     Sidebar...
   </div>
-</div></code></pre>
+</div><% end %>
 				<hr />
 
 				<h4>Technical Details</h4>
@@ -27,7 +27,7 @@
 
 				<h4>Nesting Support</h4>
 				<p>The grid allows for nesting down as far as you'd like, though at a certain point it will get absurd. You can use this nesting to create quite complex layouts, as well as some other tricks like form layouts or visual elements.</p>
-				<pre><code data-language="html"><div class="row">
+				<%= code_block do %><div class="row">
   <div class="eight columns">
     <div class="row">
       <div class="six columns">
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-</div></code></pre>
+</div><% end %>
 
 				<hr />
 
@@ -395,7 +395,7 @@
 				</div>
 
 				<p>The syntax supports push and pull for two to ten columns, and is added directly to the columns themselves.</p>
-				<pre><code data-language="html"><div class="row">
+				<%= code_block do %><div class="row">
   <div class="two columns push-ten">
     .two.columns		
   </div>
@@ -411,7 +411,7 @@
   <div class="five columns pull-seven">
     .five.columns (last)			
   </div>
-</div></code></pre>
+</div><% end %>
 
 				<hr />
 
@@ -446,14 +446,14 @@
 					</div>
 				</div>
 
-				<pre><code data-language="html"><div class="row display">
+				<%= code_block do %><div class="row display">
   <div class="three mobile-one columns">
     .three.mobile-one.columns
   </div>
   <div class="nine mobile-three columns">
     .nine.mobile-three.columns
   </div>
-</div></code></pre>
+</div><% end %>
 
 				<h5>Mobile Source Ordering</h5>
 				<p>You can use the same push and pull style classes on the 4-column phone grid. The syntax includes <code>.pull-one-mobile</code>, <code>.pull-two-mobile</code>, <code>.pull-three-mobile</code>, as well as <code>.push-one-mobile</code>, <code>.push-two-mobile</code>, <code>.push-three-mobile</code>.</p>
@@ -506,11 +506,11 @@
         <br>
         <p><strong>Note:</strong> Sometimes there are clearing issues in IE8. If you are seeing these issues, simply uncomment the Block Grid section within your foundation app.js file. If you don't have those line in your app.js file, copy them below:</p>
 
-        <pre><code data-language="html">// UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
+        <%= code_block do %>// UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
 // $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'both'});
 // $('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'both'});
 // $('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'both'});
-// $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'both'});</code></pre>
+// $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'both'});<% end %>
   		</div>
   		<div class="four columns">
   		  <%= render "download" %>
