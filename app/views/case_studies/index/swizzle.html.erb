@@ -14,7 +14,7 @@
     <div class="ten columns push-two">
       <div class="row">
         <div class="six columns">
-          <p class="show-for-small"><a href="index.php">&larr; Back to Home</a></p>
+          <p class="show-for-small"><a href="<%= root_path %>">&larr; Back to Home</a></p>
           <h2>Swizzle</h2>
           <h4 class="subheader">Beautiful, and built in the browser.</h4>
 
@@ -33,7 +33,7 @@
           <h4>Device-Specific Navigation</h4>
           <p>We used Foundation's mobile visibility classes to hide the top navigation from mobile devices, and replace it with a menu link (the menu link is hidden from desktops with the visibility classes too). The link anchors to the footer navigation, which uses a bit of CSS to change the layout.</p>
           <h4>Next Steps: Client Friendly</h4>
-          <p>What's next is to switch our client portal over to using Foundation. We've got lots of forms in our client portal, and until now they've been a real headache to style. We're also going to use <a href="docs/reveal.php">Reveal</a> for some great interactive features.</p>
+          <p>What's next is to switch our client portal over to using Foundation. We've got lots of forms in our client portal, and until now they've been a real headache to style. We're also going to use <a href="<%:= docs_reveal_path %>">Reveal</a> for some great interactive features.</p>
         </div>
         <div class="six columns pull-six">
           <%= image_tag "case-swizzle-2.jpg" %>

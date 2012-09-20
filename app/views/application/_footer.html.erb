@@ -1,7 +1,7 @@
 <footer class="row">
   <section class="five columns">
     <h6><strong>Made by ZURB</strong></h6>
-    <p>Foundation is made by <a href="http://www.zurb.com/">ZURB</a>, a product design agency in Campbell, California. We've put more than 14 years of experience building web products, services and websites into this framework. <a href="../about.php">Foundation Info and Goodies &rarr;</a></p>
+    <p>Foundation is made by <a href="http://www.zurb.com/">ZURB</a>, a product design agency in Campbell, California. We've put more than 14 years of experience building web products, services and websites into this framework. <a href="<%= about_path %>">Foundation Info and Goodies &rarr;</a></p>
   </section>
 
   <section class="three columns">
@@ -11,7 +11,7 @@
 
   <section class="four columns">
     <h6><strong>Need some help?</strong></h6>
-    <p>For answers or help visit the <a href="docs/support.php">Support page</a>.</p>
+    <p>For answers or help visit the <a href="<%= docs_support_path %>">Support page</a>.</p>
 
     <ul class="link-list">
     	<li>
@@ -35,11 +35,11 @@
     </div>
     <div class="eight columns">
       <ul class="link-list right">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="download.php">Download</a></li>
-        <li><a href="docs/index.php">Documentation</a></li>
-        <li><a href="docs/installing.php">Install</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="<%= root_path %>">Home</a></li>
+        <li><a href="<%= download_path %>">Download</a></li>
+        <li><a href="<%= docs_root_path %>">Documentation</a></li>
+        <li><a href="<%= docs_install_path %>">Install</a></li>
+        <li><a href="<%= about_path %>">About</a></li>
         <li><a href="http://feeds.feedburner.com/zurb/blog">Subscribe to the ZURBlog</a></li>
       </ul>
     </div>

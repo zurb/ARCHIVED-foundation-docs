@@ -3,6 +3,7 @@ FoundationDocs::Application.routes.draw do
   get "download"     => "index#download"
   get "whats-new"    => "index#whats_new", as: :whats_new
   get "migration"    => "index#migration"
+  get "about"        => "index#about", as: :about
   
   namespace :docs do
     root to: "index#home"
